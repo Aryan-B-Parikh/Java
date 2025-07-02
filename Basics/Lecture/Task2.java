@@ -1,42 +1,71 @@
-package Basics;
-class Student
-{
-    String name;
-    int rollno;
+import java.util.Scanner;
 
-    public Student(String name, int rollno) {
-        this.name = name;
-        this.rollno = rollno;
-       
+class Student {
+    int roll;
+    String name;
+
+    Student(int r, String n) {
+        roll = r;
+        name = n;
     }
-    public void displayInfo() {
-        System.out.println("Name: " + name);
-        System.out.println("RollNo: " + rollno);
+
+    void display() {
+        System.out.println("Name of student: " + name);
+        System.out.println("Roll no is: " + roll);
     }
 }
-class Exam extends Student
-{
-    int marks1;
-    int marks2;
-    int marks3;
-    public Exam(String name, int rollno, int marks1, int marks2, int marks3) {
-        super(name, rollno);
-        this.marks1 = marks1;
-        this.marks2 = marks2;
-        this.marks3 = marks3;
-        System.out.println("Marks1: " + this.marks1);
-        System.out.println("Marks2: " + this.marks2);
-        System.out.println("Marks3: " + this.marks3);
-        if (marks1 < 35 || marks2 < 35 || marks3 < 35) {
+
+class Exam extends Student {
+    int s1, s2, s3;
+
+
+    Exam(int r, String n, int s1, int s2, int s3) {
+        super(r, n);
+        this.s1 = s1;
+        this.s2 = s2;
+        this.s3 = s3;
+    }
+
+    void result() {
+        float marks = (s1 + s2 + s3) / 3.0f;
+
+        display(); 
+        if (s1 < 50|| s2 < 50 || s3 < 50) {
+            System.out.println("You have failed in one or more subjects.");
+        } 
+        else if (marks < 40) {
             System.out.println("Result: Fail");
-        } else {
-            System.out.println("Result: Pass");
+        } 
+        else
+         {
+            System.out.println("Result: Pass ");
+            System.out.println("Percentage: " + marks + "%");
         }
     }
 }
-class Task2 {
-    public static void main(String[] args) {
-        Exam exam = new Exam("Aryan", 101, 85, 90, 95);
-        exam.displayInfo();
+
+public class Task2 
+{
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter roll number: ");
+        int roll = sc.nextInt();
+
+        sc.nextLine(); // consume newline
+        System.out.print("Enter name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter marks in subject 1: ");
+        int s1 = sc.nextInt();
+
+        System.out.print("Enter marks in subject 2: ");
+        int s2 = sc.nextInt();
+
+        System.out.print("Enter marks in subject 3: ");
+        int s3 = sc.nextInt();
+
+        Exam ex = new Exam(roll, name, s1, s2, s3);
+        ex.result();
     }
 }
