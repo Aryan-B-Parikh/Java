@@ -1,0 +1,1 @@
+// 1.constructor overloading ,static variabes 2. overriding 2 strings (System.out.println(sobj); should print bject information)
