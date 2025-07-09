@@ -1,6 +1,6 @@
 // First Class Interest Calculate
 // Second Max out of three number
-package Basics;
+package Basics.Lecture;
 class Interest{
     int principalAmount;
     float rate;

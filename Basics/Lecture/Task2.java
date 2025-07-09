@@ -1,3 +1,4 @@
+package Basics.Lecture;
 import java.util.Scanner;
 
 class Student {
