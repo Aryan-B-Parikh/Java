@@ -1,4 +1,4 @@
-package Basics.Lab;
+package Basics.Lab.Assignment;
 class Student {
     int id;
     String name;

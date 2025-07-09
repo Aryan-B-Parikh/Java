@@ -1,5 +1,5 @@
 // 1.constructor overloading ,static variabes 2. overriding 2 strings (System.out.println(sobj); should print object information)
-package Basics.Lab;
+package Basics.Lab.Assignment;
 
 class Student{
     private int stdId;
@@ -20,7 +20,7 @@ class Student{
     public String getStdName() {
         return stdName;
     }
-
+    @Override
     public String toString() {
         return "Student ID: " + stdId + ", Name: " + stdName;
     }
