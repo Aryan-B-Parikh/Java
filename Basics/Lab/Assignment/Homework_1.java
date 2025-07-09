@@ -21,7 +21,6 @@ class Student{
         return stdName;
     }
 
-    @Override
     public String toString() {
         return "Student ID: " + stdId + ", Name: " + stdName;
     }
