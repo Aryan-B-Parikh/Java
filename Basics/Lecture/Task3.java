@@ -15,7 +15,7 @@ class Branch extends Bank
         super(0.0); // Default interest rate
     }
 }
-class Client extends Branck{
+class Client extends Branch{
     double p;
     double a;
 
