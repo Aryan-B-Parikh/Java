@@ -29,6 +29,7 @@ class employee{
 
     public void display() {
         System.out.println("Employee ID: " + empId + ", Name: " + empName + ", Department: " + empDepartment + ", Salary: " + empSalary + "Type: " + empType);
+        System.out.println("Total Employees: " + empCount);
     }
 }
 
