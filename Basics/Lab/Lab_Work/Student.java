@@ -1,4 +1,4 @@
-package Basics.Lab;
+package Basics.Lab.Lab_Work ;
 
 public class Student {
     private int stdId;
