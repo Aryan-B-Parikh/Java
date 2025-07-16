@@ -1,4 +1,4 @@
-package Basics;
+package Basics.Lab.Lab_Work;
 class Test {
     int a;
     int b;

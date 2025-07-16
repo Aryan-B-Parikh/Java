@@ -1,4 +1,4 @@
-package Basics;
+package Basics.Lab.Lab_Work;
 import java.util.Scanner;
 class Main{
     public static void main(String[] a){
