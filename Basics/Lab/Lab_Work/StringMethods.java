@@ -7,6 +7,7 @@ public class StringMethods
         StringBuilder str1 = new StringBuilder("Aryan ");
         StringBuilder str2 = new StringBuilder("Parikh");
         StringBuilder str3;
+        
         str3 = str1.append(str2);
         System.out.println("String after appending: " + str3);
         str3.delete(6, 12);
