@@ -1,5 +1,4 @@
 package Basics.Lab.Assignment;
-
 import java.util.Objects;
 
 class Student {
@@ -8,7 +7,7 @@ class Student {
     private String studentDepartment;
     private Course course;
 
-    private class Course {
+    class Course {
         private String course1;
         private String course2;
         private String course3;
@@ -44,6 +43,31 @@ class Student {
         this.course = new Course(c1, c2, c3);
     }
 
+    public void enrollInSemester(String semester, String[] courses) {
+        class SemesterEnrollment {
+            public void showEnrollment() {
+                System.out.print("Semester " + semester + " courses for " + studentName + ": ");
+                for (String c : courses)
+                    System.out.print(c + " ");
+                System.out.println();
+            }
+        }
+        SemesterEnrollment se = new SemesterEnrollment();
+        se.showEnrollment();
+    }
+
+    public void checkScholarshipEligibility(final int marks) {
+        interface Scholarship {
+            boolean isEligible(int marks);
+        }
+        Scholarship scholarship = new Scholarship() {
+            public boolean isEligible(int marks) {
+                return marks > 85;
+            }
+        };
+        System.out.println(studentName + " scholarship eligibility (marks=" + marks + "): " + scholarship.isEligible(marks));
+    }
+
     @Override
     public String toString() {
         return "Student ID: " + studentID + ", Name: " + studentName +
@@ -56,9 +80,9 @@ class Student {
         if (this == obj) return true;
         if (obj == null || getClass() != obj.getClass()) return false;
         Student student = (Student) obj;
-        return studentID == student.studentID &&
+        return (studentID == student.studentID &&
                 studentName.equals(student.studentName) &&
-                studentDepartment.equals(student.studentDepartment);
+                studentDepartment.equals(student.studentDepartment));
     }
 
     @Override
@@ -83,5 +107,11 @@ public class Practical1_2 {
         System.out.println("Hash code of student1: " + student1.hashCode());
         System.out.println("Hash code of student2: " + student2.hashCode());
         System.out.println("Hash code of student3: " + student3.hashCode());
+
+        student1.enrollInSemester("1", new String[]{"Data Structures", "OOP", "Discrete Math"});
+        student2.enrollInSemester("2", new String[]{"Networking", "DSA", "Java"});
+
+        student1.checkScholarshipEligibility(92);
+        student2.checkScholarshipEligibility(76);
     }
 }
