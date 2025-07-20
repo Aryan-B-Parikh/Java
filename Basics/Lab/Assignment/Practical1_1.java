@@ -32,7 +32,6 @@ class employee{
         System.out.println("Total Employees: " + empCount);
     }
 }
-
 public class Practical1_1{
     public static void main(String[] args) {
         employee emp1 = new employee(101, "Aryan", "HR", 50000, "Full-Time");
