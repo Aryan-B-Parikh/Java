@@ -1,4 +1,4 @@
-package Basics.Lecture;
+package Basics.Lecture.Tasks;
 interface Add
 {
     int add(int a,int b);
