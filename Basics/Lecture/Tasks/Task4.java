@@ -1,4 +1,4 @@
-package Basics.Lecture;
+package Basics.Lecture.Task;
 abstract class game {
     abstract void play();
 }

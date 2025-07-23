@@ -1,4 +1,4 @@
-package Basics.Lecture;
+package Basics.Lecture.Tasks;
 import java.lang.Math;
 
 class Bank{
