@@ -33,5 +33,4 @@ public class Task2307_2
         E e = new E();
         e.display();
     }
-    
 }
