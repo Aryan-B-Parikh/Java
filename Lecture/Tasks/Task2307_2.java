@@ -1,4 +1,4 @@
-package Basics.Lecture.Tasks;
+package Lecture.Tasks;
 interface  A
 {
     int a=20;
