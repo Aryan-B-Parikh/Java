@@ -3,14 +3,12 @@ class Events {
     private String eventName;
     private String eventDate;
     private String eventVenue;
-
     Events(int eventID, String eventName, String eventDate, String eventVenue) {
         this.eventID = eventID;
         this.eventName = eventName;
         this.eventDate = eventDate;
         this.eventVenue = eventVenue;
     }
-
     public void displayEventDetails() {
         System.out.println("Event ID: " + eventID);
         System.out.println("Event Name: " + eventName);
@@ -18,12 +16,10 @@ class Events {
         System.out.println("Event Venue: " + eventVenue);
     }
 }
-
 interface Registrable {
     public void registerParticipant(String name);
     public void showParticipants();
 }
-
 class CodingEvent extends Events implements Registrable
 {
     private  int maxParticipants;
@@ -71,7 +67,6 @@ class CodingEvent extends Events implements Registrable
         }
     }
 }
-
 class RoboticsEvent extends Events implements Registrable{
     private  int maxParticipants;
     private float EventDuration;
@@ -118,7 +113,6 @@ class RoboticsEvent extends Events implements Registrable{
         }
     }
 }
-
 class HackathonEvent extends Events implements Registrable{
     private  int maxParticipants;
     private float EventDuration;
@@ -165,7 +159,6 @@ class HackathonEvent extends Events implements Registrable{
         }
     }
 }
-
 public class FullCode {
     public static void main(String args[]) {
         Events e1 = new CodingEvent(001,"Code fest","11/10/2025","CSPIT",30,2.5f,"Code Rush");
@@ -195,7 +188,6 @@ public class FullCode {
 
         r1.showParticipants();
         r2.showParticipants();
-        r3.showParticipants();
-                  
+        r3.showParticipants();           
     }
 }
