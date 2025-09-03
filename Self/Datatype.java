@@ -1,5 +1,3 @@
-package Basics.Self;
-
 public class Datatype {
     public static void main(String []args){
         // Integer data type
