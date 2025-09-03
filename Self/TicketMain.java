@@ -11,7 +11,5 @@ public void cancelTicket(int count) {
 }
 }
 public class TicketMain {
-    
-} TicketMain {
-    
+     
 }
